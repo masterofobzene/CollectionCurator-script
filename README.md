@@ -11,7 +11,7 @@ I searched hi and low for a script to only filter the images and not tag them in
 * Filters pictures with faces by saving them in a preconfigured folder. (you can change the folder)
 * It removes metadata from output pictures automatically after face detection.
 
-### What does it NOT do?
+### What does this NOT do?
 
 * It doesn't send any info over internet.
 * It doesn't DELETE ANYTHING.
