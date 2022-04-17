@@ -38,7 +38,7 @@ from mtcnn import MTCNN
 #CollectionCurator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
 
 #Input from user, here you tell where to look for pictures. You can drag and drop folders.
-source_input = input("Please paste the directory containing images: ")
+source_input = input("Please drag & drop the directory containing images: ")
 old_string = (source_input)
 source_dir=old_string.strip('"')
 dest_dir = "E:\\XXXXXX\\XXXXX\\XXXXXXX\\"# <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
