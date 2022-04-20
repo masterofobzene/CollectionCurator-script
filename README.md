@@ -1,3 +1,33 @@
+# CollectionCurator script
+A python (over windows) script to filter pictures without faces in them using face detection from MTCNN.
+
+### Why?
+I collect NSFW multimedia and I HATE closeups, "c_ntshots", headless or bad angles where the performer's face cannot be seen. The increased randomness in quality of onlyfans content (and alikes) and the availability of large photo packs makes curation a time consuming process.
+I searched hi and low for a script to only filter the images and not tag them in any way or "over-process" in a any way. Also, no other script that I found would separate images with faces from images without them. I don't need facial recognition (recognizing and naming persons in the pictures) so I had to make it for myself.
+
+
+### What does this do?
+
+* Filters pictures with faces by saving them in a preconfigured folder. (you can change the folder)
+* It removes metadata from output pictures automatically after face detection.
+
+### What does it NOT do?
+
+* It doesn't send any info over internet.
+* It doesn't DELETE ANYTHING.
+* It doesn't recognize the faces (no tagging done)
+
+# Pre-requisites:
+
+* Python 3.2
+* Tensorflow  ```pip install tensorflow```
+* Numpy  ```pip install numpy```
+* PIL ```pip install pil```
+* MTCNN ```pip install mtcnn```
+
+
+# SCRIPT:
+```python
 import os
 import glob
 import numpy as np
@@ -85,3 +115,20 @@ def remove_metadata(outputfile):
 
 
 nooutput()
+```
+
+# Usage:
+
+## __First mandatory step:__ 
+Change the *dest_dir* path (watch for ***USER INPUT REQUIRED*** in the script above at the line 44) to the path you want your __output__ files to go. __Use double backlashes.__ 
+Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
+
+Here are a couple of tips/warnings/FAQ:
+* Check the *input folders* before deleting them. The script is far from perfection and some pictures you might like might be missed.
+* The script doesn't like paths with double quotes, but fear not! the script will remove them automatically if it finds them.
+* Removing metadata is done to the output files only.
+* Your source files are untouched.
+* I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
+
+
+ 
