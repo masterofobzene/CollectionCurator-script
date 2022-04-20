@@ -20,7 +20,7 @@ I searched hi and low for a script to only filter the images and not tag them in
 # Pre-requisites:
 
 * Python 3.2
-* Tensorflow  ```pip install tensorflow```
+* Tensorflow  For CPU only: ```pip install tensorflow``` For GPU: ```pip install tensorflow-gpu```
 * Numpy  ```pip install numpy```
 * PIL ```pip install pil```
 * MTCNN ```pip install mtcnn```
