@@ -118,7 +118,11 @@ nooutput()
 # Usage:
 
 ## __First mandatory step:__ 
-Change the *dest_dir* path (watch for ***USER INPUT REQUIRED*** in the script above at the line 44) to the path you want your __output__ files to go. __Use double backlashes.__ 
+Change the *dest_dir* path (watch for ***USER INPUT REQUIRED***) to the path you want your __output__ files to go. __Use double backlashes.__ 
+
+## __Optional (but highly recommended) step:__
+Download 'mtcnn.py' and replace your 'mtcnn.py' in (C:\Users\yourusername\AppData\Local\Programs\Python\Python38\Lib\site-packages\mtcnn\mtcnn.py).
+Don't worry, the file is vainilla it just has my parameters to end with less positives.
 Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
 
 Here are a couple of tips/warnings/FAQ:
