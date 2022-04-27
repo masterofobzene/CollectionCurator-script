@@ -1,4 +1,4 @@
-# NSFW Photo Curator script
+# NSFW Collection Curator script
 A python (over windows) script to filter pictures without faces in them using face detection from MTCNN.
 
 ### Why?
