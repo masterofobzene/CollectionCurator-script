@@ -1,4 +1,4 @@
-# CollectionCurator script
+# NSFW Photo Curator script
 A python (over windows) script to filter pictures without faces in them using face detection from MTCNN.
 
 ### Why?
@@ -37,7 +37,7 @@ from mtcnn import MTCNN
 #import tensorflow as tf
 #tf.compat.v1.disable_eager_execution()
 
-#Collection Curator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
+#NSFW Collection Curator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
 
 #Input from user, here you tell where to look for pictures. You can drag and drop folders.
 source_input = input("Please paste the directory containing images: ")
