@@ -37,10 +37,10 @@ from mtcnn import MTCNN
 #import tensorflow as tf
 #tf.compat.v1.disable_eager_execution()
 
-#NSFW Collection Curator is a "closeups" picture filter. It is a humble script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
+#Collection Curator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
 
 #Input from user, here you tell where to look for pictures. You can drag and drop folders.
-source_input = input("Please paste the directory containing images: ")
+source_input = input("Please drag & drop the directory containing images: ")
 source_dir = (source_input)
 source_dir = source_dir.strip('"')
 source_dir2 = source_dir.replace('[', 'o[o')
@@ -48,7 +48,9 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\XXXXX\\XXXXXX\\XXXXXXX\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
+dest_dir = "E:\\Perfil\\Downloads\\CUNTSHOT FILTER OUTPUT\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
+
+
 
 
 #Checks for output folder existence in dest_dir.
@@ -69,10 +71,11 @@ def nofiles():
 #Checks the files inside input folder and filters non-image files.
 def folders_eachfile(source_dir, source_dirclean):
     for imagefile in glob.iglob(source_dirclean + '/**/*', recursive=True):
-     if imagefile.endswith(('.jpg', '.png', '.jpeg')):
+     if imagefile.endswith(('.jpg', '.png', '.jpeg', '.bmp')):
         print(imagefile)
         filename = os.path.basename(imagefile)
         path = os.path.dirname(imagefile)
+        global path2 
         path2 = ((os.path.basename(path)) + '\\')
         do_each_file(source_dir, imagefile, path2, filename )
 
@@ -96,21 +99,28 @@ def detect_face( imagefile, outputfile ):
         return;
     else:
         cv2.imwrite(outputfile, cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
-        remove_metadata(outputfile)
+        remove_metadata(outputfile, imagefile)
         return;
 
 #Removes exif metadata from output files
-def remove_metadata(outputfile):
-        try:
-            image = Image.open(outputfile)
-            image_data = list(image.getdata())
-            new_image = Image.new(image.mode, image.size)
-            new_image.putdata(image_data)
-            new_image.save(outputfile)  
-            return True
-        except Exception as err:
-            print(err)
-            return False
+def remove_metadata(outputfile, imagefile):
+    global path2
+    try:
+        image = Image.open(outputfile)
+        image_data = list(image.getdata())
+        new_image = Image.new(image.mode, image.size)
+        new_image.putdata(image_data)
+        if os.path.isfile(dest_dir + path2 + 'folder.jpg'):
+            new_image.save(outputfile)
+            return
+        else: 
+            new_path = (dest_dir + path2)
+            new_name = (new_path + 'folder.jpg')
+            os.rename(outputfile, new_name)
+            return
+    except Exception as err:
+        print(err)
+        return False
 
 
 nooutput()
