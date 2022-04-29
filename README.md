@@ -10,6 +10,7 @@ I searched hi and low for a script to only filter the images and not tag them in
 
 * Filters pictures with faces by saving them in a preconfigured folder. (you can change the folder)
 * It removes metadata from output pictures automatically after face detection.
+* Renames the first image to 'folder.jpg' to make a folder image (Win 10)
 
 ### What does it NOT do?
 
