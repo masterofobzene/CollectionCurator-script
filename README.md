@@ -48,7 +48,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\Perfil\\Downloads\\CUNTSHOT FILTER OUTPUT\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
+dest_dir = "E:\\xxxxxxxxx\\xxxxxxxx\\xxxxxxxxxx\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
 
 
 
