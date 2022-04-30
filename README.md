@@ -160,5 +160,5 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * I'm not responsible in any way of the use you give to this script.
 * This is a "Franken-python" script. You are free to use the code for your own projects as well.
 * Feeling kind-hearted? share your NSFW sources on the Issues section. Use the [NSFW SOURCES] tag please. I might add them in the Wiki section for everyone to check out.
-
+* Metadata is used by filehostings (among many, many others) to "search & destroy" the files.
  
