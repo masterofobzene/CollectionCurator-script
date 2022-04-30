@@ -20,8 +20,19 @@ I searched hi and low for a script to only filter the images and not tag them in
 
 # Pre-requisites:
 
-* Python 3.2
-* Tensorflow  For CPU only: ```pip install tensorflow``` For GPU: ```pip install tensorflow-gpu```
+### RESTRICTIVE REQUIREMENTS (requires free registration on nvidia site):
+* [NVIDIA CUDA Toolkit](https://anonfiles.com/b2n7Mbbayc/cuda_11.6.0_511.23_windows.exe_7z)
+* [NVIDIA Deep Neural Network library (cuDNN)](https://anonfiles.com/53ZfLcb5yc/cudnn-windows-x86_64-8.4.0.27_cuda11.6-archive_zip)
+
+A word here; to get those install files from above you need to register with a special dev account at nvidia's site.
+Since that is a loss of time and I don't give a fuck about nvidia's restrictive approach, I've uploaded the files for you
+so you don't have to go like me through all the senseless and privacy mining process.
+Updated versions of these files will require you to do this though, sadly.
+
+-----------------------------------------
+### Easy to install Requirements:
+* Python 3 __(Please check installation steps on their website)__
+* Tensorflow  ```pip install tensorflow```  __(Please check additional requirements/installation steps on their website)__
 * Numpy  ```pip install numpy```
 * PIL ```pip install pil```
 * MTCNN ```pip install mtcnn```
@@ -31,12 +42,9 @@ I searched hi and low for a script to only filter the images and not tag them in
 ```python
 import os
 import glob
-import numpy as np
 import cv2
 from PIL import Image
 from mtcnn import MTCNN
-#import tensorflow as tf
-#tf.compat.v1.disable_eager_execution()
 
 #Collection Curator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
 
@@ -137,12 +145,16 @@ Download 'mtcnn.py' and replace your 'mtcnn.py' in (C:\Users\yourusername\AppDat
 Don't worry, the file is vainilla it just has my parameters to end with less false positives.
 Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
 
-Here are a couple of tips/warnings/FAQ:
+Here are a couple of tips/warnings/FAQ/did you know's?:
 * Check the *input folders* before deleting them. The script is far from perfection and some pictures you might like might be missed.
-* The script doesn't like paths with double quotes, but fear not! the script will remove them automatically if it finds them.
-* Removing metadata is done to the output files only.
-* Your source files are untouched.
+* The script doesn't like paths with double quotes, so I made the script remove them automatically if it finds them in your source path.
+* Removal of metadata is done to the output files only.
+* Your source files are left untouched. Delete them when you are sure you have all you want.
 * I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
+* Are you a pro? want to give advise/fix or upgrade the script? use the issues section.
+* Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11).
+* Windows 11 is a beta for a real next gen Windows. Skip it, trust me. They always do te same.
+* 
 
 
  
