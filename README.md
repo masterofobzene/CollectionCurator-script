@@ -145,16 +145,20 @@ Download 'mtcnn.py' and replace your 'mtcnn.py' in (C:\Users\yourusername\AppDat
 Don't worry, the file is vainilla it just has my parameters to end with less false positives.
 Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
 
-Here are a couple of tips/warnings/FAQ/did you know's?:
+---------------------------------------------------------------
+### Here are a couple of tips/warnings/FAQ/did you know's?:
 * Check the *input folders* before deleting them. The script is far from perfection and some pictures you might like might be missed.
 * The script doesn't like paths with double quotes, so I made the script remove them automatically if it finds them in your source path.
 * Removal of metadata is done to the output files only.
 * Your source files are left untouched. Delete them when you are sure you have all you want.
 * I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
-* Are you a pro? want to give advise/fix or upgrade the script? use the issues section.
+* Are you a pro? want to give advise/fix or upgrade the script? use the issues section and be humble.
 * Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11).
-* Windows 11 is a beta for a real next gen Windows. Skip it, trust me. They always do te same.
-* 
-
+* Windows 11 is a beta for a real next gen Windows. Skip it, trust me. They always do the same.
+* I made this script to meet my own demands, don't get mad if you feel something is lacking.
+* Speed on a 3080 RTX is 2 seconds per photo (3744 x 5616 pixels) aprox. This is variable according to picture sizes.
+* I'm not responsible in any way of the use you give to this script.
+* This is a "Franken-python" script. You are free to use the code for your own projects as well.
+* Feeling kind-hearted? share your NSFW sources on the Issues section. Use the [NSFW SOURCES] tag please. I might add them in the Wiki section for everyone to check out.
 
  
