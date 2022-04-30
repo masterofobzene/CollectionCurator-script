@@ -3,7 +3,7 @@ A python (over windows) script to filter pictures without faces in them using fa
 
 ### Why?
 I collect NSFW multimedia and I HATE closeups, "c_ntshots", headless or bad angles where the performer's face cannot be seen. The increased randomness in quality of onlyfans content (and alikes) and the availability of large photo packs makes curation a time consuming process.
-I searched hi and low for a script to only filter the images and not tag them in any way or "over-process" in a any way. Also, no other script that I found would separate images with faces from images without them. I don't need facial recognition (recognizing and naming persons in the pictures) so I had to make it for myself.
+I searched hi and low for a script to only filter the images and not tag them in any way or "over-process" in a any way but couldn't find any. No other script that I found would separate images with faces from images without them so I had to make one for myself.
 
 
 ### What does this do?
