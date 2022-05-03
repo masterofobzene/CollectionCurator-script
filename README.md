@@ -23,7 +23,7 @@ I searched hi and low for a script to only filter the images/videos with detecte
 ### Please download the whole files from repo: 
 https://github.com/masterofobzene/CollectionCurator-script/archive/refs/heads/main.zip
 Decompress on the folder you want it to remain.
-mtcnn.py is an optional, read below.
+
 
 ### RESTRICTIVE REQUIREMENTS (requires free registration on nvidia site):
 * [NVIDIA CUDA Toolkit](https://anonfiles.com/b2n7Mbbayc/cuda_11.6.0_511.23_windows.exe_7z)
@@ -174,7 +174,7 @@ This script uses Thumbnail Generator from https://github.com/truethari/thumb-gen
 Change the *dest_dir* path (watch for ***USER INPUT REQUIRED***) to the path you want your __output__ files to go. __Use double backlashes.__ 
 
 ## __Optional (but highly recommended) step:__
-Download 'mtcnn.py' and replace your 'mtcnn.py' in (C:\Users\yourusername\AppData\Local\Programs\Python\Python38\Lib\site-packages\mtcnn\mtcnn.py).
+Download ['mtcnn.py'](https://fs-01.cyberdrop.to/mtcnn-mrSOkzKU.zip) and replace your 'mtcnn.py' in (C:\Users\yourusername\AppData\Local\Programs\Python\Python38\Lib\site-packages\mtcnn\mtcnn.py).
 Don't worry, the file is vainilla it just has my parameters to end with less false positives.
 Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
 
