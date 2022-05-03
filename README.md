@@ -69,7 +69,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\xxxxx\\xxxxxx\\xxxxxxxx\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
+dest_dir = "E:\\xxxxx\\xxxxxx\\xxxxxxxx" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
 
 #Checks for output folder existence in dest_dir.
 def nooutput():
@@ -100,11 +100,11 @@ def folders_eachfile(source_dir, source_dirclean):
 #Makes sure the output folders of galleries are made or exists. 
 def do_each_file(source_dir, imagefile, path2, filename ):
      if os.path.exists(dest_dir + path2):
-        outputfile = (dest_dir + path2 + '\\' + filename)
+        outputfile = (dest_dir + path2 + filename)
         detect_face(imagefile, outputfile)
      else:
         os.mkdir(dest_dir + path2)
-        outputfile = (dest_dir + path2 + '\\' + filename)
+        outputfile = (dest_dir + path2 + filename)
         detect_face(imagefile, outputfile)
         return
 
