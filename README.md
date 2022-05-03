@@ -191,11 +191,10 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * I made this script to meet my own demands, don't get mad if you feel something is lacking.
 * Speed on a 3080 RTX is 2 seconds per photo (3744 x 5616 pixels) aprox. This is variable according to picture sizes.
 * I'm not responsible in any way of the use you give to this script.
-* This is a "Franken-python" script. You are free to use the code for your own projects as well.
-* Feeling kind-hearted? share your NSFW sources on the Issues section. Use the [NSFW SOURCES] tag please. I might add them in the Wiki section for everyone to check out.
+* This is a "Franken-script". You are free to use the code for your own projects as well.
 * Metadata is used by filehostings (among many, many others) to "search & destroy" the files.
 * I discovered that by doing a "thumbnail list" of the videos and then scanning that file with MTCNN is way faster than detecting frame by frame for face presence in videos. It has a downside: it will be less acuarate because we are taking small samples of the videos instead of scanning all the video, but I resolved that the tradeoff is bearable.
 * Pictures are COPIED to output dir while videos are MOVED. This is to reduce impact on HDD space while doing the filtering process.
-* You may notice that output pictures have reduced filesize than originals, this is due to metadata removal.
+* You may notice that output pictures have a reduced filesize than originals, this is due to metadata removal.
 
  
