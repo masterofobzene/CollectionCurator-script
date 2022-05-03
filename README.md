@@ -20,6 +20,11 @@ I searched hi and low for a script to only filter the images/videos with detecte
 
 # Pre-requisites:
 
+### Please download the whole files from repo: 
+https://github.com/masterofobzene/CollectionCurator-script/archive/refs/heads/main.zip
+Decompress on the folder you want it to remain.
+mtcnn.py is an optional, read below.
+
 ### RESTRICTIVE REQUIREMENTS (requires free registration on nvidia site):
 * [NVIDIA CUDA Toolkit](https://anonfiles.com/b2n7Mbbayc/cuda_11.6.0_511.23_windows.exe_7z)
 * [NVIDIA Deep Neural Network library (cuDNN)](https://anonfiles.com/53ZfLcb5yc/cudnn-windows-x86_64-8.4.0.27_cuda11.6-archive_zip)
@@ -36,7 +41,6 @@ Updated versions of these files will require you to do this though, sadly.
 * Numpy  ```pip install numpy```
 * PIL ```pip install pil```
 * MTCNN ```pip install mtcnn```
-
 
 
 # SCRIPT:
