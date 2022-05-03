@@ -69,7 +69,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\xxxxx\\xxxxxx\\xxxxxxxx" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
+dest_dir = "E:\\Perfil\\Downloads\\FILTRADAS" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
 
 #Checks for output folder existence in dest_dir.
 def nooutput():
@@ -90,7 +90,6 @@ def nofiles():
 def folders_eachfile(source_dir, source_dirclean):
     for imagefile in glob.iglob(source_dirclean + '/**/*', recursive=True):
      if imagefile.endswith(('jpg', 'png', 'jpeg', 'bmp', 'mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
-        print(imagefile)
         filename = os.path.basename(imagefile)
         path = os.path.dirname(imagefile)
         global path2 
@@ -115,8 +114,11 @@ def detect_face( imagefile, outputfile ):
         img = cv2.cvtColor(cv2.imread(imagefile), cv2.COLOR_BGR2RGB)
         faces = detector.detect_faces(img)
         if len(faces) != 0:
+            print(os.path.basename(imagefile) + '   OK, SAVED PICTURE')
             cv2.imwrite(outputfile, cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
             remove_metadata(outputfile, imagefile)
+        else:
+            print(os.path.basename(imagefile) + '   NO FACE DETECTED IN PICTURE')
     else:
         if imagefile.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
             videoprocess(imagefile, outputfile)
@@ -136,10 +138,10 @@ def videoprocess(imagefile, outputfile):
     faces = detector.detect_faces(img)
     if len(faces) != 0:
         shutil.move(imagefile, outputfile)
-        print('Good one! Saving')
+        print('GOOD! SAVING VIDEO')
         os.remove(thumbs)
     else:
-        print('No face detected, cleaning thumbnails')
+        print('NO FACE DETECTED IN VIDEO')
         os.remove(thumbs)
 
 #Removes metadata from output pictures
