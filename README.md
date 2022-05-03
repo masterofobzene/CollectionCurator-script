@@ -5,6 +5,7 @@ A python (over windows) script to filter pictures and videos without faces in th
 I collect NSFW multimedia and I HATE closeups, "c_ntshots", headless or bad angles where the performer's face cannot be seen. The increased randomness in quality of onlyfans content (and alikes) and the availability of large "packs" makes curation a time consuming process.
 I searched hi and low for a script to only filter the images/videos with detected faces but couldn't find any. No other script that I found would separate images/videos with faces from those without them so I had to make one for myself.
 
+![til](https://github.com/masterofobzene/CollectionCurator-script/blob/main/realtime.gif)
 
 ### What does this do?
 
