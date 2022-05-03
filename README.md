@@ -55,9 +55,11 @@ from mtcnn import MTCNN
 import shutil
 from thumb_gen.__init__ import Generator
 
-#Collection Curator is a "closeups" picture remover. It is a humble and newbie-made script to filter pictures without faces, helping the curation process of picture collections. This was thought with NSFW use in mind but you can use it for other purposes.
+#Collection Curator is a "closeups" filter. It is a humble franken-script to filter pictures/videos without faces, helping the curation process of collections.
+
 detector = MTCNN()
 os.system('cls')
+
 #Input from user, here you tell where to look for pictures. You can drag and drop folders.
 source_input = input("Please drag & drop the directory containing images: ")
 source_dir = (source_input)
@@ -67,10 +69,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\xxxxx\\xxxxxx\\xxxxxxxx\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking. Use double backlashes or it will error. MUST end with double backlashes too.
-
-
-
+dest_dir = "E:\\xxxxx\\xxxxxx\\xxxxxxxx\\" # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
 
 #Checks for output folder existence in dest_dir.
 def nooutput():
@@ -122,6 +121,7 @@ def detect_face( imagefile, outputfile ):
         if imagefile.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
             videoprocess(imagefile, outputfile)
 
+#Processes the videos detected in the source folder
 def videoprocess(imagefile, outputfile):
     app = Generator(imagefile,
     columns=3,
@@ -142,6 +142,7 @@ def videoprocess(imagefile, outputfile):
         print('No face detected, cleaning thumbnails')
         os.remove(thumbs)
 
+#Removes metadata from output pictures
 def remove_metadata(outputfile, imagefile):
     global path2
     try:
