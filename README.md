@@ -71,7 +71,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\Perfil\\Downloads\\FILTRADAS" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
+dest_dir = "E:\\xxxxxxxx\\xxxxxxxxx\\xxxxxxxxxx" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
 
 #Checks for output folder existence in dest_dir.
 def nooutput():
