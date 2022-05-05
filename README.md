@@ -42,13 +42,14 @@ Updated versions of these files will require you to do this though, sadly.
 * Numpy  ```pip install numpy```
 * PIL ```pip install pil```
 * MTCNN ```pip install mtcnn```
+* shutil ```pip install shutil```
+* OpenCV ```pip install opencv```
 
 
 # SCRIPT:
 ```python
 import os
 import glob
-import time
 import numpy as np
 import cv2
 from PIL import Image
