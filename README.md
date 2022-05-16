@@ -56,6 +56,7 @@ from PIL import Image
 from mtcnn import MTCNN
 import shutil
 from thumb_gen.__init__ import Generator
+#from pathlib import Path
 
 #Collection Curator is a "closeups" filter. It is a humble franken-script to filter pictures/videos without faces, helping the curation process of collections.
 
@@ -71,7 +72,7 @@ source_dir2 = source_dir2.replace(']', 'o]o')
 source_dir2 = source_dir2.replace('o[o', '[[]')
 source_dir2 = source_dir2.replace('o]o', '[]]')
 source_dirclean = source_dir2.replace('#', '[#]')
-dest_dir = "E:\\xxxxxxxx\\xxxxxxxxx\\xxxxxxxxxx" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
+dest_dir = "E:\\xxxxxxx\\xxxxxxxx\\xxxxxxxx" + '\\' # <-- ***USER INPUT REQUIRED*** This will be your output folder, change it to your liking.
 
 #Checks for output folder existence in dest_dir.
 def nooutput():
@@ -91,11 +92,11 @@ def nofiles():
 #Checks the files inside input folder and filters non-image files.
 def folders_eachfile(source_dir, source_dirclean):
     for imagefile in glob.iglob(source_dirclean + '/**/*', recursive=True):
-     if imagefile.endswith(('jpg', 'png', 'jpeg', 'bmp', 'mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
+     if imagefile.endswith(('jpg', 'png', 'jpeg', 'bmp', 'mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv')):
         filename = os.path.basename(imagefile)
         path = os.path.dirname(imagefile)
-        global path2 
-        path2 = ((os.path.basename(path)) + '\\')
+        global path2
+        path2 = ((path.split(os.path.sep, 3)[-1] + '\\'))
         do_each_file(source_dir, imagefile, path2, filename )
 
 #Makes sure the output folders of galleries are made or exists. 
@@ -104,11 +105,10 @@ def do_each_file(source_dir, imagefile, path2, filename ):
         outputfile = (dest_dir + path2 + filename)
         detect_face(imagefile, outputfile)
      else:
-        os.mkdir(dest_dir + path2)
+        os.makedirs(dest_dir + path2)
         outputfile = (dest_dir + path2 + filename)
         detect_face(imagefile, outputfile)
         return
-
 
 #Main script, detects faces in images and outputs only the images with faces detected.
 def detect_face( imagefile, outputfile ):
@@ -117,12 +117,12 @@ def detect_face( imagefile, outputfile ):
         faces = detector.detect_faces(img)
         if len(faces) != 0:
             print(os.path.basename(imagefile) + '   OK, SAVED PICTURE')
-            cv2.imwrite(outputfile, cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+            shutil.move(imagefile, outputfile)
             remove_metadata(outputfile, imagefile)
         else:
             print(os.path.basename(imagefile) + '   NO FACE DETECTED IN PICTURE')
     else:
-        if imagefile.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
+        if imagefile.endswith(('mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv')):
             videoprocess(imagefile, outputfile)
 
 #Processes the videos detected in the source folder
@@ -188,7 +188,6 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * Check the *input folders* before deleting them. The script is far from perfection and some pictures you might like might be missed.
 * The script doesn't like paths with double quotes, so I made the script remove them automatically if it finds them in your source path.
 * Removal of metadata is done to the output files only.
-* Your source files are left untouched. Delete them when you are sure you have all you want.
 * I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
 * Are you a pro? want to give advise/fix or upgrade the script? use the issues section and be humble.
 * Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11).
@@ -199,7 +198,7 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * This is a "Franken-script". You are free to use the code for your own projects as well.
 * Metadata is used by filehostings (among many, many others) to "search & destroy" the files.
 * I discovered that by doing a "thumbnail list" of the videos and then scanning that file with MTCNN is way faster than detecting frame by frame for face presence in videos. It has a downside: it will be less acuarate because we are taking small samples of the videos instead of scanning all the video, but I resolved that the tradeoff is bearable.
-* Pictures are COPIED to output dir while videos are MOVED. This is to reduce impact on HDD space while doing the filtering process.
+* Pictures and Videos are moved to output dir. This is to reduce impact on HDD space while doing the filtering process and I found its easier to check and compare the "leftovers".
 * You may notice that output pictures have a reduced filesize than originals, this is due to metadata removal.
 
  
