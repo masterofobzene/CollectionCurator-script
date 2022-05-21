@@ -24,13 +24,13 @@ def check_files(paths_or_files):
                 real_path = os.path.join(current_directory, path_or_file)
 
         if os.path.isfile(real_path):
-            if real_path.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
+            if real_path.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv', 'mov')):
                 videos.append(real_path)
             else:
                 sys.exit("{}: file not supported".format(real_path))
         elif os.path.isdir(real_path):
             for file in os.listdir(real_path):
-                if file.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv')):
+                if file.endswith(('mp4', 'mkv', 'm4a', 'webm', 'avi', 'wmv', 'mov')):
                     videos.append(os.path.join(real_path, file))
             if videos == []:
                 sys.exit("{}: all of files in the directory are not supported".format(real_path))
