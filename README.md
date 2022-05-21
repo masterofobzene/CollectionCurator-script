@@ -92,7 +92,7 @@ def nofiles():
 #Checks the files inside input folder and filters non-image files.
 def folders_eachfile(source_dir, source_dirclean):
     for imagefile in glob.iglob(source_dirclean + '/**/*', recursive=True):
-     if imagefile.endswith(('jpg', 'png', 'jpeg', 'bmp', 'mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv')):
+     if imagefile.endswith(('jpg', 'png', 'jpeg', 'bmp', 'mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv', 'mov')):
         filename = os.path.basename(imagefile)
         path = os.path.dirname(imagefile)
         global path2
@@ -122,7 +122,7 @@ def detect_face( imagefile, outputfile ):
         else:
             print(os.path.basename(imagefile) + '   NO FACE DETECTED IN PICTURE')
     else:
-        if imagefile.endswith(('mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv')):
+        if imagefile.endswith(('mp4', 'mkv', 'm4v', 'webm', 'avi', 'wmv', 'mov')):
             videoprocess(imagefile, outputfile)
 
 #Processes the videos detected in the source folder
