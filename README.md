@@ -176,7 +176,7 @@ This script uses Thumbnail Generator from https://github.com/truethari/thumb-gen
 # Usage:
 
 ## __First mandatory step:__ 
-Change the *dest_dir* path (watch for ***USER INPUT REQUIRED***) to the path you want your __output__ files to go. __Use double backlashes.__ 
+Change the *dest_dir* path (watch for ***USER INPUT REQUIRED***) to the path you want your __output__ files to go.
 
 ## __Optional (but highly recommended) step:__
 Download ['mtcnn.py'](https://fs-01.cyberdrop.to/mtcnn-mrSOkzKU.zip) and replace your 'mtcnn.py' in (C:\Users\yourusername\AppData\Local\Programs\Python\Python38\Lib\site-packages\mtcnn\mtcnn.py).
