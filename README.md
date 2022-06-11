@@ -66,10 +66,9 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
 * Video detection depends on how many pics are inside the thumbnails generated. You can change how many from the script, search for this (no quotes) "imgCount=" the value next to it is how many pics will be generated. Less = faster,worse detection; more= slower,better detection.
 * Are you a pro? want to give advise/fix or upgrade the script? use the issues section and be humble.
-* Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11).
-* Windows 11 is a beta for a real next gen Windows. Skip it, trust me. They always do the same.
-* I made this script to meet my own demands, don't get mad if you feel something is missing.
-* Speed on a 3080 RTX is 2 seconds per photo (3744 x 5616 pixels) aprox. This is variable according to picture sizes.
+* Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11, don't install that beta OS).
+* I made this script to meet my own needs, don't get mad if you feel something is missing.
+* Speed on a 3080 RTX is +- 2 seconds per 4k photo (3744 x 5616 pixels) aprox. This is variable according to picture sizes.
 * I'm not responsible in any way of the use you give to this script.
 * This is a "Franken-script". You are free to use the code for your own projects as well.
 * Metadata is used by filehostings (among many, many others) to "search & destroy" the files.
