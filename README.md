@@ -64,6 +64,7 @@ Then the use is simple. Just open the script, drag & drop the desired folder to 
 * The script doesn't like paths with double quotes, so I made the script remove them automatically if it finds them in your source path.
 * Removal of metadata is done to the output files only.
 * I didn't make the "dest_dir" input to be requested by the script since most people will have to configure this path just one time.
+* Video detection depends on how many pics are inside the thumbnails generated. You can change how many from the script, search for this (no quotes) "imgCount=" the value next to it is how many pics will be generated. Less = faster,worse detection; more= slower,better detection.
 * Are you a pro? want to give advise/fix or upgrade the script? use the issues section and be humble.
 * Renaming one .jpg picture inside a folder as "folder.jpg" makes it a "folder image" AKA "folder thumbnail"; very useful on Windows 10. (stupid MS removed them in 11).
 * Windows 11 is a beta for a real next gen Windows. Skip it, trust me. They always do the same.
