@@ -40,6 +40,9 @@ Updated versions of these files will require you to do this though, sadly.
 * Python 3.8.2__(Please check installation steps on their website)__
 * Tensorflow  ```pip install tensorflow```  __(Please check additional requirements/installation steps on their website)__
 * MTCNN ```pip install mtcnn```
+* infomedia ```pip install infomedia```
+* Pillow ```pip install pillow```
+* pathlib ```pip install pathlib```
 
 
 This script uses Thumbnail Generator from https://github.com/truethari/thumb-gen
