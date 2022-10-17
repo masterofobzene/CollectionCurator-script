@@ -37,13 +37,10 @@ Updated versions of these files will require you to do this though, sadly.
 
 -----------------------------------------
 ### Easy to install Requirements:
-* Python 3 __(Please check installation steps on their website)__
+* Python 3.8.2__(Please check installation steps on their website)__
 * Tensorflow  ```pip install tensorflow```  __(Please check additional requirements/installation steps on their website)__
-* Numpy  ```pip install numpy```
-* PIL ```pip install pil```
 * MTCNN ```pip install mtcnn```
-* shutil ```pip install shutil```
-* OpenCV ```pip install opencv```
+
 
 This script uses Thumbnail Generator from https://github.com/truethari/thumb-gen
 ..and to be honest, a lot more pieces of code from many scripts. To the respective owners, thank you.
