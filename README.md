@@ -53,10 +53,6 @@ This script uses Thumbnail Generator from https://github.com/truethari/thumb-gen
 ## __First mandatory step:__ 
 Change the *dest_dir* path (watch for ***USER INPUT REQUIRED***) to the path you want your __output__ files to go.
 
-## __Optional (but highly recommended) step:__
-Download ['mtcnn.py'](https://fs-01.cyberdrop.to/mtcnn-mrSOkzKU.zip) and replace your 'mtcnn.py' in (C:\Users\yourusername\AppData\Local\Programs\Python\Python38\Lib\site-packages\mtcnn\mtcnn.py).
-Don't worry, the file is vainilla it just has my parameters to end with less false positives.
-Then the use is simple. Just open the script, drag & drop the desired folder to be curated, hit 'enter' then wait.
 
 ---------------------------------------------------------------
 
