@@ -27,13 +27,9 @@ Decompress on the folder you want it to remain.
 
 
 ### RESTRICTIVE REQUIREMENTS (requires free registration on nvidia site):
-* [NVIDIA CUDA Toolkit](https://anonfiles.com/b2n7Mbbayc/cuda_11.6.0_511.23_windows.exe_7z)
-* [NVIDIA Deep Neural Network library (cuDNN)](https://anonfiles.com/53ZfLcb5yc/cudnn-windows-x86_64-8.4.0.27_cuda11.6-archive_zip)
+* [NVIDIA CUDA Toolkit]
+* [NVIDIA Deep Neural Network library (cuDNN)]
 
-A word here; to get those install files from above you need to register with a special dev account at nvidia's site.
-Since that is a loss of time and I don't give a fuck about nvidia's restrictive approach, I've uploaded the files for you
-so you don't have to go like me through all the senseless and privacy mining process.
-Updated versions of these files will require you to do this though, sadly.
 
 -----------------------------------------
 ### Easy to install Requirements:
