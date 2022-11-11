@@ -1,15 +1,11 @@
 # NSFW Collection Curator script
 A python (over windows) script to filter pictures and videos without faces in them using face detection from MTCNN.
 
-### Why?
-I collect NSFW multimedia and I HATE closeups, "c_ntshots", headless or bad angles where the performer's face cannot be seen. The increased randomness in quality of onlyfans content (and alikes) and the availability of large "packs" makes curation a time consuming process.
-I searched hi and low for a script to only filter the images/videos with detected faces but couldn't find any. No other script that I found would separate images/videos with faces from those without them so I had to make one for myself.
-
 ![til](https://github.com/masterofobzene/CollectionCurator-script/blob/main/realtime.gif)
 
 ### What does this do?
 
-* Filters pictures and videos with faces by saving them in a preconfigured folder. (you can change the folder)
+* Filters pictures and videos with faces by moving them in a preconfigured folder. (you can change the folder)
 * It removes metadata from output pictures automatically after face detection.
 * Renames the first image to 'folder.jpg' to make a folder image (Win 10)
 
