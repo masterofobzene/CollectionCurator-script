@@ -33,7 +33,7 @@ Decompress on the folder you want it to remain.
 * Tensorflow  ```pip install tensorflow```  __(Please check additional requirements/installation steps on their website)__
 * MTCNN ```pip install mtcnn```
 * infomedia ```pip install infomedia```
-* Pillow ```pip install pillow```
+* Pillow ```pip install Pillow==9.5.0``` (new version 10 won't work right now 07/15/2023)
 * pathlib ```pip install pathlib```
 
 
