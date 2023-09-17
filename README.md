@@ -22,12 +22,18 @@ A python (over windows) script to filter pictures and videos without faces in th
 -----------------------------------------
 ### Install:
 1- Install pre-requisites above
+
 2- Download latest release
+
 3- Unzip
+
 4- Execute "install.bat"
+
 5- Change your output folder by opening "CollectionCurator.py" with notepad. (line 31)
 
+
 # Usage:
+
 Double click "CollectionCurator.py" and when prompted, drag and drop your folder full of pictures/videos to be filtered and press {enter}.
 
 ---------------------------------------------------------------
