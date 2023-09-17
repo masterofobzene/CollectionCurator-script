@@ -15,8 +15,8 @@ A python (over windows) script to filter pictures and videos without faces in th
 
 # Pre-requisites:
 ### RESTRICTIVE REQUIREMENTS (requires free registration on nvidia site):
-* [NVIDIA CUDA Toolkit]
-* [NVIDIA Deep Neural Network library (cuDNN)]
+* [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)
+* [NVIDIA Deep Neural Network library (cuDNN)](https://developer.nvidia.com/cudnn)
 
 
 -----------------------------------------
