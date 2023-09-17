@@ -1,7 +1,7 @@
 # Collection Curator script
 A python (over windows) script to filter pictures and videos without faces in them using face detection from MTCNN.
 
-![til](https://github.com/masterofobzene/CollectionCurator-script/blob/main/realtime.gif)
+![til](https://github.com/masterofobzene/CollectionCurator-script/blob/main/real.gif)
 
 ### What does this do?
 
